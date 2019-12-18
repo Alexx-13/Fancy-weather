@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+        <meta charset="UTF-8">
+        <title>Weather App - JavaScript</title>
+        <link rel="stylesheet" href="font/Rimouski.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="app-title">
+                <p>F a n c y W e a t h e r</p>
+            </div>
+            <div class="notification"> </div>
+
+            <div class="searchContainer">
+                <div class="searchContainer_string">
+                    <input type="text" class="searchControl" id="searchInput"
+                        placeholder="Enter Location or
+                        ZIP" x-webkit-speech>
+                    <button class="searchControl" id="searchBtn">Search</button>
+                </div>
+            </div>
+            <div class="weather-container">
+                <div class="weather-wrapper">
+                    <div class="weather-icon">
+                        <img src="icons/unknown.png" alt="">
+                    </div>
+                    <div class="part-a">
+                        <div class="temperature-value">
+                            <p>? °<span>C</span></p>
+                        </div>
+                        <div class="temperature-description">
+                            <p> ? </p>
+                        </div>
+                        <div class="location">
+                            <p>?</p>
+                        </div>
+                    </div>
+                    <div class="part-b">
+                        <div class="longitude">
+                            <p>?</p>
+                        </div>
+                        <div class="latitude">
+                            <p>?</p>
+                        </div>
+                        <div class="humidity">
+                            <p>?</p>
+                        </div>
+                    </div>
+                    <div class="part-c">
+                        <div class="wind">
+                            <p> ? </p>
+                        </div>
+                        <div class="time">
+                            <p> ? </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="switch">
+                    <div class="switch_tempChange">
+                        <p><input type="button" id="input_button_temp_change"
+                                value="C/F"></p>
+                    </div>
+                    <div class="switch_backChange">
+                        <input type="button" id="input_button_bg_change" value="Background">
+                    </div>
+                </div>
+            </div>
+            <div class="weather-container-three">
+                <div class="weather-wrapper-a">
+                    <div class="weather-icon">
+                        <img src="icons/unknown.png" alt="">
+                    </div>
+                    <div class="part-a">
+                        <div class="temperature-value">
+                            <p>? °<span>C</span></p>
+                        </div>
+                        <div class="temperature-description">
+                            <p> ? </p>
+                        </div>
+                        <div class="location">
+                            <p>?</p>
+                        </div>
+                    </div>
+                    <div class="part-b">
+                        <div class="longitude">
+                            <p>?</p>
+                        </div>
+                        <div class="latitude">
+                            <p>?</p>
+                        </div>
+                        <div class="humidity">
+                            <p>?</p>
+                        </div>
+                    </div>
+                    <div class="part-c">
+                        <div class="wind">
+                            <p> ? </p>
+                        </div>
+                        <div class="time">
+                            <p> ? </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-wrapper-b">
+                    <div class="weather-icon">
+                        <img src="icons/unknown.png" alt="">
+                    </div>
+                    <div class="part-a">
+                        <div class="temperature-value">
+                            <p>? °<span>C</span></p>
+                        </div>
+                        <div class="temperature-description">
+                            <p> ? </p>
+                        </div>
+                        <div class="location">
+                            <p>?</p>
+                        </div>
+                    </div>
+                    <div class="part-b">
+                        <div class="longitude">
+                            <p>?</p>
+                        </div>
+                        <div class="latitude">
+                            <p>?</p>
+                        </div>
+                        <div class="humidity">
+                            <p>?</p>
+                        </div>
+                    </div>
+                    <div class="part-c">
+                        <div class="wind">
+                            <p> ? </p>
+                        </div>
+                        <div class="time">
+                            <p> ? </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="weather-wrapper-c">
+                    <div class="weather-icon">
+                        <img src="icons/unknown.png" alt="">
+                    </div>
+                    <div class="part-a">
+                        <div class="temperature-value">
+                            <p>? °<span>C</span></p>
+                        </div>
+                        <div class="temperature-description">
+                            <p> ? </p>
+                        </div>
+                        <div class="location">
+                            <p>?</p>
+                        </div>
+                    </div>
+                    <div class="part-b">
+                        <div class="longitude">
+                            <p>?</p>
+                        </div>
+                        <div class="latitude">
+                            <p>?</p>
+                        </div>
+                        <div class="humidity">
+                            <p>?</p>
+                        </div>
+                    </div>
+                    <div class="part-c">
+                        <div class="wind">
+                            <p> ? </p>
+                        </div>
+                        <div class="time">
+                            <p> ? </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div id="map"></div>
+        <script src="./src/app.js"></script>
+        <script src="./src/map.js"></script>
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDogeQo62FfHIKTP4tcWWcLaSCMgCrC9mk&callback=initMap">
+        </script>
+    </body>
+</html>
