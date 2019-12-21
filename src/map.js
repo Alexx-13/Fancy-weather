@@ -1,5 +1,5 @@
 var map, infoWindow;
-/*
+
 function drawMap(lon, lat) {
     map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: -34.397, lng: 150.644 },
@@ -9,7 +9,7 @@ function drawMap(lon, lat) {
 
     // Try HTML5 geolocation.
     var pos = {
-        lat: lat
+        lat: lat,
         lng: lon
     };
 
@@ -17,8 +17,8 @@ function drawMap(lon, lat) {
     infoWindow.setContent('Location found.');
     infoWindow.open(map);
     map.setCenter(pos);
-}
-*/
+};
+
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: -34.397, lng: 150.644 },

@@ -51,7 +51,7 @@ function showError(error) {
 
 // GET WEATHER FROM API PROVIDER
 function getWeather(latitude, longitude) {
-    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
     
     fetch(api)
         .then(function (response) {
@@ -145,7 +145,7 @@ function getSearchMethod(searchTerm) {
 
 function searchWeather(searchTerm) {
     getSearchMethod(searchTerm);
-    fetch(`http://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&appid=${key}`).then(result => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&appid=${key}`).then(result => {
         return result.json();
     }).then(result => {
         init(result);
@@ -213,7 +213,7 @@ function init(resultFromServer) {
             resultFromServer.main.unit = "celsius"
         }
     });
-    //drawMap(resultFromServer.coord.lon, resultFromServer.coord.lat)
+    drawMap(resultFromServer.coord.lon, resultFromServer.coord.lat);
 
 }
 ///// SEARCH BUTTON
