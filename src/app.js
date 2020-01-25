@@ -51,7 +51,7 @@ function showError(error) {
 
 // GET WEATHER FROM API PROVIDER
 function getWeather(latitude, longitude) {
-    let api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
+    let api = `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${key}`;
     
     fetch(api)
         .then(function (response) {
@@ -77,10 +77,6 @@ function getWeather(latitude, longitude) {
         });
         
 }
-
-
-// function get
-
 // DISPLAY WEATHER TO UI
 function displayWeather() {
     iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`;
@@ -145,7 +141,7 @@ function getSearchMethod(searchTerm) {
 
 function searchWeather(searchTerm) {
     getSearchMethod(searchTerm);
-    fetch(`https://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&appid=${key}`).then(result => {
+    fetch(`http://api.openweathermap.org/data/2.5/weather?${searchMethod}=${searchTerm}&appid=${key}`).then(result => {
         return result.json();
     }).then(result => {
         init(result);

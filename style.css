@@ -2,6 +2,30 @@
     font-family: "Rimouski";
 }
 
+@keyframes look {
+    from {
+        background-color: red;
+    }
+    80% {
+        background-color: lightcoral;
+    }
+    70% {
+        background-color: lightgray;
+    }
+    60% {
+        background-color: lightskyblue;
+    }
+    50% {
+        background-color: blue;
+    }
+    to {
+        background-color: green;
+    }
+}
+#audioA {
+    display: none;
+}
+
 body{
    height: 100%;
     margin: 0;
@@ -28,19 +52,20 @@ body{
 }
 
 .app-title{
-    width: 100%px;
+    width: 100%;
     height: 50px;
     border-radius: 10px 10px 0 0;
-    
 }
 
 .app-title p{
-    
     padding: 15px;
     margin: 0 auto;
     font-size: 25px;
     color: blue;
     background-color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .notification{
@@ -76,7 +101,8 @@ body{
 
 .weather-icon{
     height: 128px;
-    
+    animation-duration: 50s;
+    animation-name: look;
 }
 
 .weather-icon img{
@@ -211,6 +237,8 @@ body{
     width: 100px;
     height: 30px;
     background-color: lightblue;
+    animation-duration: 50s;
+    animation-name: look;
 }
 
 #input_button_bg_change{
@@ -219,12 +247,15 @@ body{
     height: 30px;
     background-color: lightblue;
     margin-left: 15px;
+    animation-duration: 50s;
+    animation-name: look;
 }
 
 .city-search{
     cursor: pointer;
     width: 400px;
     height: 30px;
+    
 }
 
 .searchContainer{
@@ -256,6 +287,8 @@ body{
     width: 100px;
     height: 36px;
     cursor: pointer;
+    animation-duration: 50s;
+    animation-name: look;
 }
 
 .switch{
@@ -306,7 +339,8 @@ body{
         display: flex;
         
     }
-    
+
+   
     .container{
         width: 100%;    
         height: 600px;
@@ -1758,6 +1792,15 @@ body{
         display: flex;
         
     }
+
+    #audio {
+        display: none;
+    }
+
+    #audioA {
+        display: flex;
+        padding-top: 15px;
+    }
     
     .container{
         width: 100%;    
@@ -1982,6 +2025,7 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
     }
     
     .searchContainer_string{
@@ -2133,7 +2177,7 @@ body{
     .temperature-value p{
         
         color: blue;
-        font-size: 50px;
+        font-size: 40px;
         text-align: center;
         cursor: pointer;
     }
