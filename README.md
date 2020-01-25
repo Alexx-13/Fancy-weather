@@ -4,4 +4,6 @@
 4. It can find any city or country and show the same information.
 5. It changes the backround image by click, or by the oploading the page of browser.
 6. It gives few links of an aouthor.
-You can take a look with github pages. The link https://alexx-13.github.io/Fancy-weather/
+7. It changes farhenheit to the celsius by click.
+8. It changes the map while looking for a location.
+To start - download the repository, use html file.
